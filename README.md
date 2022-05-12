@@ -39,9 +39,17 @@ const hobbies = ['Sports', 'Cookings'];
 for (let hobby of hobbies) {
   console.log(hobby)
 }
+#Map - It iterate over array elements and we can performa action on each item
 console.log(hobbies.map(hobby => {
   return 'Hobby: ' + hobby
-}));
+})); // [ 'Hobby: Sports', 'Hobby: Cookings' ]
 hobbies.push('Programming');
-console.log(hobbies);
+console.log(hobbies); // [ 'Sports', 'Cookings', 'Programming' ]
+
+#Filter - It returns an array after matching the condition
+const arrNumber = [1,2,3,4,5,6,7,8,9,10]
+const arrAbove5 = arrNumber.filter(function(num) {
+  return num > 5
+})
+console.log('arrAbove5-> ',arrAbove5) //arrAbove5->  [ 6, 7, 8 ]
 ```
