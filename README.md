@@ -32,6 +32,34 @@ const person = {
 console.log(person);
 person.getName()
   ```
+  # Merge Objects
+  ```javascript
+//Using a spread operator ( ...)
+let personalDetail = {
+    firstName: 'Gurjnder',
+    lastName: 'Singh',
+    age: 24,
+};
+
+
+let jobDetail = {
+    jobTitle: 'JavaScript Developer',
+    location: 'IN'
+};
+
+let employee = {
+    ...personalDetail,
+    ...jobDetail
+};
+
+console.log(employee);
+
+//Using the Object.assign() method
+
+let employee = Object.assign(personalDetail, jobDetail);
+console.log(employee);
+
+  ```
   
   # Array and methods 
 ```javascript
