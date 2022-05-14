@@ -58,7 +58,14 @@ console.log(employee);
 
 let employee = Object.assign(personalDetail, jobDetail);
 console.log(employee);
-
+// Below is the console.log(employee) result
+{
+   firstName: 'Gurjnder',
+   lastName: 'Singh',
+   age: 24,
+   jobTitle: 'JavaScript Developer',
+   location: 'IN'
+}
   ```
   
   # Array and methods 
