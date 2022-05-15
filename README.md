@@ -95,3 +95,14 @@ let result = names.find(function(name) {
 });
 console.log(result); // "Alex"
 ```
+
+ # Nullish Coalescing Operator(double question marks (??))
+```javascript
+- It only returns the second value when the first one is either null or undefined.
+
+const fName = null ?? 'Gurjinder Singh';
+console.log(fName); // 'Gurjinder Singh'
+
+let result = 1 ?? console.log('Hi');
+console.log(result); // 1
+```
