@@ -31,8 +31,20 @@ const person = {
 }
 console.log(person);
 person.getName()
+
+//Object Destructuring
+let { uName, age } = person;
+console.log(uName); //  Gurjinder Singh
+console.log(age); // 24
+
+const destructObjectInFunc = ({uName, age}) => {
+  console.log(uName);
+  console.log(age);
+}
+destructObjectInFunc(person);
+
   ```
-  # Merge Objects
+# Merge Objects
   ```javascript
 //Using a spread operator ( ...)
 let personalDetail = {
