@@ -118,3 +118,31 @@ console.log(fName); // 'Gurjinder Singh'
 let result = 1 ?? console.log('Hi');
 console.log(result); // 1
 ```
+ # Callback
+```javascript
+//Callback is a function that you pass into another function as an argument for executing later.
+function downloadImage(url, callback){
+  //...downloading code
+  callback('success')
+}
+downloadImage('www.google.com', response => {
+  console.log('Image download',response) //Image download success
+})
+// 2nd example
+function filter(numbers, callback) {
+  let result = [];  
+  for(const number in numbers) {
+    if(callback(number)) {
+      result.push(number)
+    }
+  }
+  return result;
+}
+let numbers = [1,2,3,4,5,6,7,8];
+let oddNumber = filter(numbers, num => 
+  num % 2 != 0
+)
+console.log('od numebr',oddNumber); // od numebr [ '1', '3', '5', '7' ]
+```
+
+
