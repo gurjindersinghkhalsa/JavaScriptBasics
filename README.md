@@ -1,6 +1,23 @@
 # JavaScriptBasics
-Basics of Java Script
+# JavaScript Data Types
+Primitive type
+- null - has only one value null.
+- undefined - when a variable is declared but not initialized, it is assigned the value of undefined.
+```javascript
+console.log(null == undefined); // true
+```
+- boolean - type has two literal values: true and false in lowercase
+- number - represent both integer and floating-point numbers
+- string - A string literal begins and ends with either a single quote(') or a double quote (").
 
+Object type
+- object is a collection of properties, where each property is defined as a key-value pair.
+```javascript
+const person = {
+    name: 'Gurjinder Singh',
+    age: 24,
+}
+```
 # Variable and Constants
 ```javascript
   const uName = 'Gurjidner Singh'
