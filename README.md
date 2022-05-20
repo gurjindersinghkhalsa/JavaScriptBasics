@@ -161,5 +161,13 @@ let oddNumber = filter(numbers, num =>
 )
 console.log('od numebr',oddNumber); // od numebr [ '1', '3', '5', '7' ]
 ```
+# Convert String to Integer
+//Using ParseInt
 
+Syntax 1 - parseInt(string) // string value to be parse
+
+Syntax 2 - parseInt(string, radix) // radix is an integer between 2 and 36 that represents the radix. The base in mathematical numeral systems
+```javascript
+console.log(parseInt('100',10)); // 100
+```
 
