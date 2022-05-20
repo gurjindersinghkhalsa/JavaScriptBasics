@@ -167,6 +167,8 @@ console.log('od numebr',oddNumber); // od numebr [ '1', '3', '5', '7' ]
 Syntax 1 - parseInt(string) // string value to be parse
 
 Syntax 2 - parseInt(string, radix) // radix is an integer between 2 and 36 that represents the radix. The base in mathematical numeral systems
+
+A radix of 10 converts from a decimal number, 8 converts from octal, 16 from hexadecimal, and so on.
 ```javascript
 console.log(parseInt('100',10)); // 100
 ```
