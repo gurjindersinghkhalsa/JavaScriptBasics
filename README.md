@@ -18,9 +18,20 @@ const person = {
     age: 24,
 }
 ```
-# Variable and Constants
+# Variable,let and Constants keywords
+// Earlier, pre ES6 era, only var keyword was inroduced for dec of variable
+
+// with ES6, the let and const keyword introduced
 ```javascript
+// Withou keyword it is same as var 
+  name = 'Gurjidner Singh'  
+// Using var
+  var name = 'Gurjidner Singh'  
+// Using var
+  let name = 'Gurjidner Singh'  
+// Using const
   const uName = 'Gurjidner Singh'
+
   const age = 24
   let isHasHobby = true
   isHasHobby = false
