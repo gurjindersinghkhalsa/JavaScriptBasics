@@ -47,7 +47,29 @@ const person = {
 
   console.log(userData(uName,age,isHasHobby));
   console.log(userData1(uName,age,isHasHobby));
-  ```
+//The Variable may exist in a block, inside func or outside func.
+
+//A block is a section of code inside {}
+{
+    let name = 'Gurjinder Singh';
+}
+//It has block scope. 
+
+//Function is a declared using function keyword.
+function test() {
+    let name = 'Gurjinder Singh';
+}
+//It has function scope.
+/*
+Everythind declared outside block and function is global scope.
+
+So, there are 3 type of scope.
+1. Block scope
+2. Function scope
+3. Global scope
+
+The three keywords let, var and const work around these scopes.*/
+```
 # Object property and Method
 ```javascript
 const person = {
