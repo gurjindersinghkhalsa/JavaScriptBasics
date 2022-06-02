@@ -72,6 +72,7 @@ The three keywords let, var and const work around these scopes.*/
 ```
 # Object property and Method
 ```javascript
+//How to creat object
 const person = {
     uName: 'Gurjinder Singh',
     age: 24,
@@ -79,8 +80,20 @@ const person = {
       console.log('My Name is ->' + uName)
     }
 }
+//This is the simple and most popular way
 console.log(person);
 person.getName()
+
+//You can also use Object keyword to create object
+const person = new Object();
+person.name = 'Gurjinder Singh';
+
+//You can also use 'new' with user defined constructor function
+function Person(name) {
+    this.name = name;
+}
+//Now anytime you want person object
+cosnt person = new Person('Gurjinder Singh');
 
 //Object Destructuring
 let { uName, age } = person;
@@ -205,4 +218,7 @@ A radix of 10 converts from a decimal number, 8 converts from octal, 16 from hex
 ```javascript
 console.log(parseInt('100',10)); // 100
 ```
+# FETCH API - How to make a GET and POST request in javascript
+  ```javascript
 
+  ```
