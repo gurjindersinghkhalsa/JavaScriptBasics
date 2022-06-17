@@ -220,5 +220,5 @@ console.log(parseInt('100',10)); // 100
 ```
 # FETCH API - How to make a GET and POST request in javascript
   ```javascript
-
+First will see GET Req
   ```
