@@ -2,7 +2,8 @@ const { maxHeaderSize } = require("http");
 
 console.log('Hello World')
 
-let arr = [1,32,4,5,442,654,3,43,3232,7000];
+// let arr = [1,32,4,5,442,654,3,43,3232,7000];
+let arr = [64,25,12,22,11]
 function findFirstLargest() {
     let max = arr[0]
     for(let i = 1 ;i<arr.length;i++) {
@@ -53,3 +54,29 @@ function findThreeLargest() {
 }
 
 console.log('Three Largest number are ', findThreeLargest())
+
+function selectionSort() {
+    for (let i = 0 ; i < arr.length - 1; i++) {
+
+        let maxSwapIndex = i
+        let minVal = arr[i]
+
+        for (let k = i + 1 ; k < arr.length; k++) {
+
+            console.log('Check if ',minVal,">",arr[k])
+            if (minVal > arr[k]) {
+                minVal = arr[k];
+                maxSwapIndex = k;
+                console.log("----YES-----")
+            } else {
+                console.log("N---------O")
+            }
+        }
+        console.log('swap val with val',arr[i], arr[maxSwapIndex] )
+        let oldval = arr[i]
+        arr[i] = arr[maxSwapIndex];
+        arr[maxSwapIndex] = oldval
+    }
+    return arr
+}
+console.log('selectionSort ', selectionSort())
