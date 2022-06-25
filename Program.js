@@ -54,6 +54,11 @@ function findThreeLargest() {
 }
 
 console.log('Three Largest number are ', findThreeLargest())
+function swap(x,y) {
+    var temp = arr[x];
+    arr[x] = arr[y]
+    arr[y] = temp
+}
 
 function selectionSort() {
     for (let i = 0 ; i < arr.length - 1; i++) {
@@ -62,7 +67,6 @@ function selectionSort() {
         let minVal = arr[i]
 
         for (let k = i + 1 ; k < arr.length; k++) {
-
             console.log('Check if ',minVal,">",arr[k])
             if (minVal > arr[k]) {
                 minVal = arr[k];
@@ -73,10 +77,27 @@ function selectionSort() {
             }
         }
         console.log('swap val with val',arr[i], arr[maxSwapIndex] )
-        let oldval = arr[i]
-        arr[i] = arr[maxSwapIndex];
-        arr[maxSwapIndex] = oldval
+        swap(i,maxSwapIndex);
     }
     return arr
 }
-console.log('selectionSort ', selectionSort())
+console.log('SelectionSort Result ', selectionSort())
+
+//Bubble Sort
+arr = [5, 1, 4, 2, 8]
+function BubbleSort() {
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = i+1; j < arr.length; j++) {
+            console.log('======================')
+            console.log(arr[i],'<',arr[j])
+            if(arr[i]>arr[j]) {
+                console.log('swap')
+                let element = arr[i];
+                arr[i] = arr[j];
+                arr[j] = element;
+            }
+        }
+    }
+    return arr
+}
+console.log('BubbleSort Result ',BubbleSort())
