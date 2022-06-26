@@ -64,16 +64,12 @@ function selectionSort() {
     for (let i = 0 ; i < arr.length - 1; i++) {
 
         let maxSwapIndex = i
-        let minVal = arr[i]
 
         for (let k = i + 1 ; k < arr.length; k++) {
-            console.log('Check if ',minVal,">",arr[k])
-            if (minVal > arr[k]) {
-                minVal = arr[k];
+            console.log('Check if ',arr[i],">",arr[k])
+            if (arr[i] > arr[k]) {
+                arr[i] = arr[k];
                 maxSwapIndex = k;
-                console.log("----YES-----")
-            } else {
-                console.log("N---------O")
             }
         }
         console.log('swap val with val',arr[i], arr[maxSwapIndex] )
@@ -87,17 +83,40 @@ console.log('SelectionSort Result ', selectionSort())
 arr = [5, 1, 4, 2, 8]
 function BubbleSort() {
     for(let i = 0; i < arr.length; i++) {
-        for(let j = i+1; j < arr.length; j++) {
-            console.log('======================')
-            console.log(arr[i],'<',arr[j])
-            if(arr[i]>arr[j]) {
-                console.log('swap')
-                let element = arr[i];
-                arr[i] = arr[j];
-                arr[j] = element;
+        let swapped = false
+        for(let j = 0; j < arr.length - i - 1; j++) {
+            console.log('========',i,'===========')
+            if(arr[j]>arr[j+1]) {
+                let element = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = element;
+                swapped = true
             }
+            console.log('**',j,'===========')
         }
+        if (swapped == false) {
+             break;
+         }
     }
     return arr
 }
+// Time Complexity O(n^2) worst case
+// Time Complexity O(n) best case when array is already sorted  
 console.log('BubbleSort Result ',BubbleSort())
+arr = [5, 1, 4, 2, 8,12,53,23]
+
+function insertionSort() {
+    let j;
+    let key;
+    for(let i=1;i<arr.length;i++) {
+        key = arr[i]
+        j = i-1;
+        while(j >= 0 && key < arr[j]) {
+            arr[j+1] = arr[j]
+            j = j-1;
+        }
+        arr[j+1] = key
+    }
+    return arr
+}
+console.log('Insertion sort Result =>',insertionSort())
