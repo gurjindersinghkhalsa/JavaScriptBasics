@@ -114,9 +114,36 @@ function insertionSort() {
         while(j >= 0 && key < arr[j]) {
             arr[j+1] = arr[j]
             j = j-1;
-        }
+        }   
         arr[j+1] = key
     }
     return arr
 }
 console.log('Insertion sort Result =>',insertionSort())
+
+// Program to find elements which produce sum = 9
+let arrInput = [4,7,5,2]
+function printElementHaveSum9() {
+    for (let i = 0; i< arrInput.length-1;i++) {
+        let initialElement = arrInput[i]
+
+        for (let j = i+1; j < arrInput.length;j++) { 
+                let sum = initialElement + arrInput[j]
+                if (sum === 9) {
+                    console.log('Elements have sum 9 are',initialElement ,arrInput[j])
+                    break
+                }
+        }
+    }
+}
+console.log("Program to find elements which produce sum = 9 from array", "arrInput, are below");
+console.log(printElementHaveSum9())
+
+//Program to print number 1-10 without loop
+function printNumbers(number) {
+    if (number >= 1) {
+        console.log('Number is ->',number);
+       printNumbers(number-1);
+    }
+}
+console.log('Print number 1-10 using recursion', printNumbers(10))
