@@ -148,11 +148,25 @@ function printNumbers(number) {
 }
 console.log('Print number 1-10 using recursion', printNumbers(10))
 
-let arr = [1,0,23,0,2,32]
+//Program to move all zero at the end of the array
+arr = [1,0,23,0,2,32]
+let zeroArr = []
+let numberArr = []
 function moveZeroToEnd() {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == 0) {
-
-        }
-    }
+//    let result = arr.map(element => {
+//           if (element === 0) {
+//             zeroArr.push(element)
+//           } else {
+//             numberArr.push(element)
+//           }
+//    })
+    //Second way to do the same work
+   zeroArr = arr.filter(function(element){
+    return (element === 0)
+   })
+   numberArr = arr.filter(element =>{
+    return element != 0
+   })
+   
 }
+console.log("Result after moving all 0 to end is ",moveZeroToEnd(),"\n", numberArr.concat(zeroArr))
