@@ -147,3 +147,12 @@ function printNumbers(number) {
     }
 }
 console.log('Print number 1-10 using recursion', printNumbers(10))
+
+let arr = [1,0,23,0,2,32]
+function moveZeroToEnd() {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == 0) {
+
+        }
+    }
+}
