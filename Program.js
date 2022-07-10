@@ -144,7 +144,10 @@ function printNumbers(number) {
     if (number >= 1) {
         console.log('Number is ->',number);
        printNumbers(number-1);
+
+        console.log('See this execute when ==>', number)
     }
+    console.log('Finally me here **********',number)
 }
 console.log('Print number 1-10 using recursion', printNumbers(10))
 
@@ -170,3 +173,23 @@ function moveZeroToEnd() {
    
 }
 console.log("Result after moving all 0 to end is ",moveZeroToEnd(),"\n", numberArr.concat(zeroArr))
+
+function binarySearch(array, low, high, elementToFind) {
+    if (low >= high){
+        console.log("Binary Search Element Not found");
+    } else {
+        console.log("low and high",low,high);
+        let mid = parseInt((low + high)/2)
+        console.log("low and high and mid",low,high,mid);
+        if (array[mid] == elementToFind)  {
+            console.log("Binary Search Element",elementToFind, "found at index =>" ,mid);
+        }
+        if (array[mid] > elementToFind ) {
+            binarySearch(array, low, mid, elementToFind)
+        } else if (array[mid] < elementToFind ) {
+            binarySearch(array, mid, high, elementToFind)
+        } 
+    }
+}
+let binarySrchArr = [11,12,13,14,15,16,17]
+binarySearch(binarySrchArr, 0, binarySrchArr.length, 13)
