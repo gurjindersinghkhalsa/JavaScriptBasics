@@ -184,11 +184,26 @@ function binarySearch(array, low, high, elementToFind) {
         console.log("Binary Search Element Not found");
     } else  if (elementToFind < array[mid] ) {
             binarySearch(array, low, mid - 1, elementToFind)
-    } else if (elementToFind > array[mid] ) {
+    } else { // if (elementToFind > array[mid] )    
             binarySearch(array, mid + 1 , high, elementToFind)
     } 
 }
 let binarySrchArr = [11,12,13,14,15,16,17]
-binarySearch(binarySrchArr, 0, binarySrchArr.length, 17)
+binarySearch(binarySrchArr, 0, binarySrchArr.length, 1)
+
+function linearSearch(array, serachItem) {
+    let found = false
+    for (let i = 0 ; i < array.length - 1; i++) {
+        if (array[i] == serachItem) {
+            console.log("Linear Search Element",serachItem, "found at index =>" ,i);
+            found = true
+            break
+        }
+    }
+    if (found == false) {
+        console.log('Linear search Element not found')
+    }
+}
+linearSearch(binarySrchArr,1)
 
   
