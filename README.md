@@ -23,19 +23,59 @@ const person = {
 
 // with ES6, the let and const keyword introduced
 ```javascript
-// Withou keyword it is same as var 
+// Without keyword it is same as var 
   name = 'Gurjidner Singh'  
 // Using var
   var name = 'Gurjidner Singh'  
-// Using var
+// Using let
   let name = 'Gurjidner Singh'  
 // Using const
   const uName = 'Gurjidner Singh'
-
   const age = 24
   let isHasHobby = true
   isHasHobby = false
 
+var VS let
+ 
+--We can redeclare varialbe using var
+var a = 5; // 5. 
+var a = 3; // 3
+
+--We can't redeclare varialbe using let
+let a = 5;
+let a = 3; // error - Uncaught SyntaxError: Identifier 'a' has already been declared
+but works in different scope
+
+--var has afunction scope
+--let has a block scope
+
+--let Doesn't Allow Hoisting. For example,
+console.log(a);
+let a; // Uncaught ReferenceError: a is not defined
+
+--var are hoisted to the top of the scope of the program. For example,
+console.log(a);
+var a; // undefined (not an error)
+
+It will work same as
+
+var a;
+console.log(a); // undefined
+
+--When var is used in a loop, the value of that variable changes. For example,
+var a = 2;
+for(var a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 3
+--let is used in a loop, the value of a variable does not change. For example,
+let a = 2;
+for(let a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 2
+
+# Functions
   // Normal Function
   function userData(name, age, isHasHobby){
     return ('Name is -> ' + name + 'Age is -> ' + age + 'Hobby ->' + isHasHobby)
