@@ -62,6 +62,11 @@ It will work same as
 var a;
 console.log(a); // undefined
 
+initializations are not hoisted
+// program to display value
+console.log(a); // undefined
+var a = 5;
+
 --When var is used in a loop, the value of that variable changes. For example,
 var a = 2;
 for(var a = 0; a < 3; a++) {
@@ -74,8 +79,9 @@ for(let a = 0; a < 3; a++) {
     console.log('hello');
 }
 console.log(a); // 2
-
+```
 # Functions
+```javascript
   // Normal Function
   function userData(name, age, isHasHobby){
     return ('Name is -> ' + name + 'Age is -> ' + age + 'Hobby ->' + isHasHobby)
@@ -109,6 +115,21 @@ So, there are 3 type of scope.
 3. Global scope
 
 The three keywords let, var and const work around these scopes.*/
+
+Function Hoisting
+A function can be called before declaring it. For example
+greet();
+function greet() {
+    console.log('Hi, there.');
+}
+//Output - Hi, there
+
+However, when a function is used as an expression, an error occurs because only declarations are hoisted. For example
+greet();
+let greet = function() {
+    console.log('Hi, there.');
+}
+Output - Uncaught ReferenceError: greet is not defined
 ```
 # Object property and Method
 ```javascript
