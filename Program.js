@@ -56,17 +56,14 @@ function findThreeLargest() {
 console.log('Three Largest number are ', findThreeLargest())
 function swap(x,y) {
     var temp = arr[x];
-    arr[x] = arr[y]
-    arr[y] = temp
+    arr[x] = arr[y];
+    arr[y] = temp;
 }
 
 function selectionSort() {
     for (let i = 0 ; i < arr.length - 1; i++) {
-
-        let maxSwapIndex = i
-
+        let maxSwapIndex = i;
         for (let k = i + 1 ; k < arr.length; k++) {
-            console.log('Check if ',arr[i],">",arr[k])
             if (arr[i] > arr[k]) {
                 arr[i] = arr[k];
                 maxSwapIndex = k;
@@ -77,7 +74,7 @@ function selectionSort() {
     }
     return arr
 }
-console.log('SelectionSort Result ', selectionSort())
+console.log('SelectionSort Result ', selectionSort());
 
 //Bubble Sort
 arr = [5, 1, 4, 2, 8]
@@ -125,12 +122,11 @@ console.log('Insertion sort Result =>',insertionSort())
 let arrInput = [4,7,5,2]
 function printElementHaveSum9() {
     for (let i = 0; i< arrInput.length-1;i++) {
-        let initialElement = arrInput[i]
-
+        let initialElement = arrInput[i];
         for (let j = i+1; j < arrInput.length;j++) { 
-                let sum = initialElement + arrInput[j]
+                let sum = initialElement + arrInput[j];
                 if (sum === 9) {
-                    console.log('Elements have sum 9 are',initialElement ,arrInput[j])
+                    console.log('Elements have sum 9 are',initialElement ,arrInput[j]);
                     break
                 }
         }
