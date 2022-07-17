@@ -23,19 +23,65 @@ const person = {
 
 // with ES6, the let and const keyword introduced
 ```javascript
-// Withou keyword it is same as var 
+// Without keyword it is same as var 
   name = 'Gurjidner Singh'  
 // Using var
   var name = 'Gurjidner Singh'  
-// Using var
+// Using let
   let name = 'Gurjidner Singh'  
 // Using const
   const uName = 'Gurjidner Singh'
-
   const age = 24
   let isHasHobby = true
   isHasHobby = false
 
+var VS let
+ 
+--We can redeclare varialbe using var
+var a = 5; // 5. 
+var a = 3; // 3
+
+--We can't redeclare varialbe using let
+let a = 5;
+let a = 3; // error - Uncaught SyntaxError: Identifier 'a' has already been declared
+but works in different scope
+
+--var has afunction scope
+--let has a block scope
+
+--let Doesn't Allow Hoisting. For example,
+console.log(a);
+let a; // Uncaught ReferenceError: a is not defined
+
+--var are hoisted to the top of the scope of the program. For example,
+console.log(a);
+var a; // undefined (not an error)
+
+It will work same as
+
+var a;
+console.log(a); // undefined
+
+initializations are not hoisted
+// program to display value
+console.log(a); // undefined
+var a = 5;
+
+--When var is used in a loop, the value of that variable changes. For example,
+var a = 2;
+for(var a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 3
+--let is used in a loop, the value of a variable does not change. For example,
+let a = 2;
+for(let a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 2
+```
+# Functions
+```javascript
   // Normal Function
   function userData(name, age, isHasHobby){
     return ('Name is -> ' + name + 'Age is -> ' + age + 'Hobby ->' + isHasHobby)
@@ -69,6 +115,21 @@ So, there are 3 type of scope.
 3. Global scope
 
 The three keywords let, var and const work around these scopes.*/
+
+Function Hoisting
+A function can be called before declaring it. For example
+greet();
+function greet() {
+    console.log('Hi, there.');
+}
+//Output - Hi, there
+
+However, when a function is used as an expression, an error occurs because only declarations are hoisted. For example
+greet();
+let greet = function() {
+    console.log('Hi, there.');
+}
+Output - Uncaught ReferenceError: greet is not defined
 ```
 # Object property and Method
 ```javascript
