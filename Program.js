@@ -202,4 +202,33 @@ function linearSearch(array, serachItem) {
 }
 linearSearch(binarySrchArr,1)
 
+
+const person = {
+    //  with param
+    fullNameWithCity: function(city) {
+        return this.fName + " " + this.lName + " lived in " + city
+    }
+    // without param
+    // fullName: function () {
+    //     return this.fName + " " + this.lName;
+    // }
+}
+const gPerson = {
+    fName: 'Gurjinder',
+    lName: 'Singh',
+}
+console.log('\n------JavaScript call() method--------')
+// without param
+//let fullName = person.fullName.call(gPerson)
+//console.log(fullName)
+
+const sPerson = {
+    fName: 'Sarbjeet',
+    lName: 'kaur'
+}
+// with param
+let fullName = person.fullNameWithCity.call(sPerson,"Chandigarh")
+console.log(fullName)
+
+
   
