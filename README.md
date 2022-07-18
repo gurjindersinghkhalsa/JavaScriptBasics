@@ -107,7 +107,7 @@ function test() {
 }
 //It has function scope.
 /*
-Everythind declared outside block and function is global scope.
+Everything declared outside block and function is global scope.
 
 So, there are 3 type of scope.
 1. Block scope
@@ -116,7 +116,7 @@ So, there are 3 type of scope.
 
 The three keywords let, var and const work around these scopes.*/
 
-Function Hoisting
+=>Function Hoisting
 A function can be called before declaring it. For example
 greet();
 function greet() {
@@ -130,6 +130,33 @@ let greet = function() {
     console.log('Hi, there.');
 }
 Output - Uncaught ReferenceError: greet is not defined
+
+=>call() function is a predefined javascript function. An object can use a method belonging to another object.
+
+const person = {
+    //  with param
+    fullNameWithCity: function(city) {
+        return this.fName + " " + this.lName + " lived in " + city
+    }
+    // without param
+    // fullName: function () {
+    //     return this.fName + " " + this.lName;
+    // }
+}
+const gPerson = {
+    fName: 'Gurjinder',
+    lName: 'Singh',
+}
+// without param
+//let fullName = person.fullName.call(gPerson)
+//console.log(fullName)
+const sPerson = {
+    fName: 'Sarbjeet',
+    lName: 'kaur'
+}
+// with param
+let fullName = person.fullNameWithCity.call(sPerson,"Chandigarh")
+console.log(fullName) // Sarbjeet kaur lived in Chandigarh
 ```
 # Object property and Method
 ```javascript
