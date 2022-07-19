@@ -206,7 +206,7 @@ linearSearch(binarySrchArr,1)
 const person = {
     //  with param
     fullNameWithCity: function(city) {
-        return this.fName + " " + this.lName + " lived in " + city
+        return this.fName + " " + this.lName + " lived in " + city 
     }
     // without param
     // fullName: function () {
@@ -219,15 +219,20 @@ const gPerson = {
 }
 console.log('\n------JavaScript call() method--------')
 // without param
-//let fullName = person.fullName.call(gPerson)
-//console.log(fullName)
+// let fullName = person.fullName.call(gPerson)
+// console.log("call() work here",fullName)
 const sPerson = {
     fName: 'Sarbjeet',
     lName: 'kaur'
 }
 // with param
 let fullName = person.fullNameWithCity.call(sPerson,"Chandigarh")
-console.log(fullName)
+console.log("call() work here-->",fullName)
+
+let applyFullName = person.fullNameWithCity.apply(sPerson,["Chandigarh"]);
+console.log("apply() work here-->",applyFullName)
+// let fname = person.fullName.apply(sPerson);
+// console.log("apply() work here-->",fname)
 
 function mergeSort(arr1, arr2) {
     let result = [];
