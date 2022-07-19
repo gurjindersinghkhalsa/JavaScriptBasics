@@ -131,7 +131,7 @@ let greet = function() {
 }
 Output - Uncaught ReferenceError: greet is not defined
 
-=>call() function is a predefined javascript function. An object can use a method belonging to another object.
+=>call() function is a predefined javascript function. An object can use a method belonging to another object. You can write a method that can be used on different objects
 
 const person = {
     //  with param
@@ -157,6 +157,17 @@ const sPerson = {
 // with param
 let fullName = person.fullNameWithCity.call(sPerson,"Chandigarh")
 console.log(fullName) // Sarbjeet kaur lived in Chandigarh
+
+=> apply() function, you can write a method that can be used on different objects. It work same as call() when used without param.
+
+let fullName = person.fullName.apply(sPerson);
+console.log("apply() work here-->",fullName) // apply() work here--> Sarbjeet kaur
+
+With param we need to pass param as [](array)
+
+let applyFullName = person.fullNameWithCity.apply(sPerson,["Chandigarh"]); // passing param as array in apply() method
+console.log("apply() work here-->",applyFullName) //apply() work here--> Sarbjeet kaur lived in Chandigarh
+
 ```
 # Object property and Method
 ```javascript
