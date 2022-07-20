@@ -54,25 +54,28 @@ function findThreeLargest() {
 }
 
 console.log('Three Largest number are ', findThreeLargest())
+let sArr = [64,25,12,22,11]
+
 function swap(x,y) {
-    var temp = arr[x];
-    arr[x] = arr[y];
-    arr[y] = temp;
+    var temp = sArr[x];
+    sArr[x] = sArr[y];
+    sArr[y] = temp;
 }
 
 function selectionSort() {
-    for (let i = 0 ; i < arr.length - 1; i++) {
+    for (let i = 0 ; i < sArr.length - 1; i++) {
         let maxSwapIndex = i;
-        for (let k = i + 1 ; k < arr.length; k++) {
-            if (arr[i] > arr[k]) {
-                arr[i] = arr[k];
+        for (let k = i + 1 ; k < sArr.length; k++) {
+            if (sArr[i] > sArr[k]) {
                 maxSwapIndex = k;
             }
         }
-        console.log('swap val with val',arr[i], arr[maxSwapIndex] )
-        swap(i,maxSwapIndex);
+        console.log('swap val with val',sArr[i], sArr[maxSwapIndex] )
+        if (maxSwapIndex != i) {
+            swap(i,maxSwapIndex);
+        }
     }
-    return arr
+    return sArr
 }
 console.log('SelectionSort Result ', selectionSort());
 
@@ -140,7 +143,6 @@ function printNumbers(number) {
     if (number >= 1) {
         console.log('Number is ->',number);
        printNumbers(number-1);
-
         console.log('See this execute when ==>', number)
     }
     console.log('Finally me here **********',number)
@@ -255,6 +257,7 @@ function mergeSort(arr1, arr2) {
       result.push(arr2[j])
       j++;
    }    
+   console.log('\nHere comes the Result===>', result)
     return result
 }
 
@@ -262,12 +265,19 @@ function merge(arr){
     if(arr.length <= 1) 
         return arr;
     let mid = Math.floor(arr.length/2);
-    let left = merge( arr.slice(0, mid));
+    console.log('\n******* Mid of array is ******* ', mid)
+    console.log('===Left part of array is ===', arr.slice(0, mid))
+
+    let left = merge(arr.slice(0, mid));
+
+    console.log('\n###### Sorting left part of array ######', left)
+    
     let right = merge(arr.slice(mid))
+    console.log('Here is comes now')
     return mergeSort(left,right)
 }
 
 let mergeSArr = [4, 8, 7, 2, 11, 1, 3];
-console.log('Merge Sort output -> ', merge(mergeSArr))
+console.log('==================== Merge Sort output ==============', merge(mergeSArr))
 
   
