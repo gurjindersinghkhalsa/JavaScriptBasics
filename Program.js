@@ -63,15 +63,20 @@ function swap(x,y) {
 }
 
 function selectionSort() {
-    for (let i = 0 ; i < sArr.length - 1; i++) {
+    for (let i = 0 ; i < sArr.length-1; i++) {
         let maxSwapIndex = i;
+        let value = sArr[i]
         for (let k = i + 1 ; k < sArr.length; k++) {
-            if (sArr[i] > sArr[k]) {
+            console.log('Here is i =>',i)
+            if (value > sArr[k]) {
+                value = sArr[k];
                 maxSwapIndex = k;
             }
         }
-        console.log('swap val with val',sArr[i], sArr[maxSwapIndex] )
-        if (maxSwapIndex != i) {
+        if (maxSwapIndex !== i) {
+            console.log('swap val with val',sArr[i], sArr[maxSwapIndex] )
+            console.log("issue code", maxSwapIndex,i)
+    
             swap(i,maxSwapIndex);
         }
     }
