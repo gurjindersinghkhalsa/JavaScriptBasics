@@ -62,27 +62,6 @@
 //     sArr[y] = temp;
 // }
 
-// function selectionSort() {
-//     for (let i = 0 ; i < sArr.length-1; i++) {
-//         let maxSwapIndex = i;
-//         let value = sArr[i]
-//         for (let k = i + 1 ; k < sArr.length; k++) {
-//             console.log('Here is i =>',i)
-//             if (value > sArr[k]) {
-//                 value = sArr[k];
-//                 maxSwapIndex = k;
-//             }
-//         }
-//         if (maxSwapIndex !== i) {
-//             console.log('swap val with val',sArr[i], sArr[maxSwapIndex] )
-//             console.log("issue code", maxSwapIndex,i)
-    
-//             swap(i,maxSwapIndex);
-//         }
-//     }
-//     return sArr
-// }
-// console.log('SelectionSort Result ', selectionSort());
 
 // //Bubble Sort
 // arr = [5, 1, 4, 2, 8]
@@ -291,4 +270,28 @@ function merge(arr){
 let mergeSArr = [4, 8, 7, 2, 11, 1, 3];
 console.log('==================== Merge Sort output ==============', merge(mergeSArr))
 
+const arrForSelectionSort = [21,32,4,3,33,234];
+console.log('Length of selection array', arrForSelectionSort.length);
+
+function sortWithSelection() {
+  let index = 0;
+  for (let i = 0; i< arrForSelectionSort.length-1; i++) {
+    console.log('Runing for i----->',i);
+    index = i
+    for(let j = i + 1; j< arrForSelectionSort.length-1;j++) {
+          console.log('Runing for j',j);
+          if (arrForSelectionSort[index] > arrForSelectionSort[j]) {
+            index = j;
+          }
+    }
+    if (index != i) {
+      let elementToSave = arrForSelectionSort[i];
+      arrForSelectionSort[i] = arrForSelectionSort[index];
+      arrForSelectionSort[index] = elementToSave
+    }
+  }
+  console.log('After sorting using selection sort we have', arrForSelectionSort);
+}
+
+sortWithSelection()
   
