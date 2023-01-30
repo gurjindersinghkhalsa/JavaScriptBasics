@@ -192,7 +192,7 @@ function Person(name) {
     this.name = name;
 }
 //Now anytime you want person object
-cosnt person = new Person('Gurjinder Singh');
+const person = new Person('Gurjinder Singh');
 
 //Object Destructuring
 let { uName, age } = person;
