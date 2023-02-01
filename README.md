@@ -181,6 +181,9 @@ const person = { // an object
 }
 //This is the simple and most popular way
 console.log(person);
+// get property values of the object:
+console.log(person.uname);
+console.log(person.age);
 person.getName()
 
 //You can also use Object keyword to create object
@@ -204,6 +207,19 @@ const destructObjectInFunc = ({uName, age}) => {
   console.log(age);
 }
 destructObjectInFunc(person);
+
+  ```
+# Object references and copying
+  ```javascript
+let message = "javaScript";
+let duplicateMsg = message;
+we have two seperate variables, each one storing the string
+
+Objects are not like that.
+A variable assigned to an object stores not the object itself, but its “address in memory” – in other words “a reference” to it.
+
+let employee = { name: "Gurjinder Singh" };
+let develpoer = employee; // copy the reference
 
   ```
 # Merge Objects
