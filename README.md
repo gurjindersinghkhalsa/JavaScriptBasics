@@ -172,9 +172,9 @@ console.log("apply() work here-->",applyFullName) //apply() work here--> Sarbjee
 # Object property and Method
 ```javascript
 //How to creat object
-const person = {
-    uName: 'Gurjinder Singh',
-    age: 24,
+const person = { // an object
+    uName: 'Gurjinder Singh', // by key "uName" store value "Gurjinder Singh"
+    age: 24,  // by key "age" store value 24
     getName() {
       console.log('My Name is ->' + uName)
     }
@@ -184,7 +184,7 @@ console.log(person);
 person.getName()
 
 //You can also use Object keyword to create object
-const person = new Object();
+const person = new Object(); // "object constructor" syntax
 person.name = 'Gurjinder Singh';
 
 //You can also use 'new' with user defined constructor function
