@@ -17,6 +17,21 @@ const person = {
     name: 'Gurjinder Singh',
     age: 24,
 }
+
+typeof operator
+The typeof operator allows us to see which type is stored in a variable.
+Usually used as typeof x, but typeof(x) is also possible.
+
+typeof undefined // "undefined"
+typeof 0 // "number"
+typeof 10n // "bigint"
+typeof true // "boolean"
+typeof "Gurjinder" // "string"
+typeof Symbol("id") // "symbol"
+typeof Math // "object" 
+typeof null // "object" // this is an error in the language, it’s not actually an object.
+typeof alert // "function"
+
 ```
 # Variable,let and Constants keywords
 // Earlier, pre ES6 era, only var keyword was inroduced for dec of variable
