@@ -102,6 +102,9 @@ console.log(a); // 2
     return ('Name is -> ' + name + 'Age is -> ' + age + 'Hobby ->' + isHasHobby)
   }
   // Arrow function
+ let func = function(arg1, arg2, ..., argN) {
+   return expression;
+  };
   const userData1 = (name, age, isHasHobby) => {
     return 'Name is -> ' + name + 'Age is -> ' + age + 'Hobby ->' + isHasHobby
   }
