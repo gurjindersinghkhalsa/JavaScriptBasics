@@ -5,6 +5,14 @@ Primitive type
 - undefined - when a variable is declared but not initialized, it is assigned the value of undefined.
 ```javascript
 console.log(null == undefined); // true
+
+//Null Variables
+const movieTitle = null
+// The 'not' operator implicitly
+// casts movieTitle to a boolean value
+const movieHasNoTitle = !movieTitle
+console.log(`The movie does not have a title: ${movieHasNoTitle}`)
+Output: The movie does not have a title: true
 ```
 - boolean - type has two literal values: true and false in lowercase
 - number - represent both integer and floating-point numbers
