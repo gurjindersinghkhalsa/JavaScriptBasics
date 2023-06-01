@@ -152,6 +152,14 @@ function greet() {
 }
 //Output - Hi, there
 
+let number = maxOfTwo(10,31)
+console.log('Max number is ', number)
+function maxOfTwo(a,b) {
+    if(a > b) return a;
+    else return b;
+}
+//Output - Max number is 31
+
 However, when a function is used as an expression, an error occurs because only declarations are hoisted. For example
 greet();
 let greet = function() {
