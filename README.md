@@ -41,7 +41,11 @@ typeof Symbol("id") // "symbol"
 typeof Math // "object" 
 typeof null // "object" // this is an error in the language, it’s not actually an object.
 typeof alert // "function"
-
+let number = false;
+if (typeof number != 'number') 
+     Console.log(NaN); // will log Nan
+typeof Nan // "number"
+        
 ```
 # Variable,let and Constants keywords
 // Earlier, pre ES6 era, only var keyword was inroduced for dec of variable
